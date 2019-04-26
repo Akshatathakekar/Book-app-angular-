@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Book Details
+
+        </div>
+
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-center">
+                   <img src= "{{book.imageUrl}}" class="img-responsive" height="90%" width="40%" />
+                    <br><br>
+                    
+                <button type="button" class="btn"
+                    style="background-color: #ff9f00">Add To Cart</button>
+                &nbsp;&nbsp;
+                <button type="button" class="btn"
+                    style="background-color: #fb641b">Buy Now</button>
+                </div>
+                </div>
+                <div class="col-md-6">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>BookId</th>
+                                <td>{{book.bookId}}</td>
+                            </tr>
+                            <tr>
+                                <th>Book Title</th>
+                                <td>{{book.title}}</td>
+                            </tr>
+                            <tr>
+                                <th>Authors</th>
+                                <td>
+                                    <span *ngFor="let author of book.authors">
+                                        {{author.firstName}} {{author.lastName}} <br>
+                                    </span>
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>Book Category</th>
+                                <td>{{book.category}}</td>
+                            </tr>
+                            <tr>
+                                <th>Publisher</th>
+                                <td>{{book.publisher}}</td>
+                            </tr>
+                            <tr>
+                                <th>Rating</th>
+                                <td>{{book.rating}}</td>
+                            </tr>
+                            <tr>
+                                <th>edition</th>
+                                <td>{{book.edition}}</td>
+                            </tr>
+
+                            
+                            <tr>
+                                <th>Book Price</th>
+                                <td>{{book.price |currency:"INR"}}</td>
+                            </tr>
+                            <tr>
+                                <th>Number of pages</th>
+                                <td>{{book.noOfPages}}</td>
+                            </tr>
+                            <tr>
+                                    <th>Release Date</th>
+                                    <td>{{book.releaseDate |date}}</td>
+                                </tr>
+                        </tbody>
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- {{book|json}} -->
