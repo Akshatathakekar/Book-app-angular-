@@ -8,6 +8,8 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.routes';
 import { ResourceNotFoundComponent } from './notfound.component';
 import { BookService } from './book/book.service';
+import {FormsModule} from '@angular/forms';
+
 
 @NgModule({
   declarations:[
@@ -23,6 +25,8 @@ import { BookService } from './book/book.service';
   ],
   imports:[
     BrowserModule,
+    FormsModule,
+
     BookModule,
     CustomerModule,
     RouterModule.forRoot(appRoutes)
